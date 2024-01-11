@@ -24,11 +24,12 @@ const SettingsSonarrView: FunctionComponent = () => {
     <Layout name="Sonarr">
       <Section header="Use Sonarr">
         <Check label="Enabled" settingKey={seriesEnabledKey}></Check>
+        <Message>Whether to pull Series from Sonarr.</Message>
       </Section>
       <CollapseBox settingKey={seriesEnabledKey}>
         <Section header="Host">
           <Text label="Address" settingKey="settings-sonarr-ip"></Text>
-          <Message>Hostname or IPv4 Address</Message>
+          <Message>Hostname or IPv4 Address of Sonarr.</Message>
           <Number label="Port" settingKey="settings-sonarr-port"></Number>
           <Text
             label="Base URL"
@@ -45,6 +46,7 @@ const SettingsSonarrView: FunctionComponent = () => {
             settingKey="settings-sonarr-http_timeout"
           ></Selector>
           <Text label="API Key" settingKey="settings-sonarr-apikey"></Text>
+          <Message>Your Sonarr API key.</Message>
           <Check label="SSL" settingKey="settings-sonarr-ssl"></Check>
           <URLTestButton category="sonarr"></URLTestButton>
         </Section>
@@ -53,6 +55,10 @@ const SettingsSonarrView: FunctionComponent = () => {
             label="Minimum Score"
             settingKey="settings-general-minimum_score"
           ></Slider>
+          <Message>
+            The score of a subtitle file is a measuerment of how well its
+            filename matches your media filename.
+          </Message>
           <Chips
             label="Excluded Tags"
             settingKey="settings-sonarr-excluded_tags"
@@ -88,7 +94,7 @@ const SettingsSonarrView: FunctionComponent = () => {
             as soon as episodes are imported.
           </Message>
           <Message>
-            Search can be triggered using this command
+            Search can be triggered using this command: 
             <Code>
               curl -d "sonarr_episodefile_id=$sonarr_episodefile_id" -H
               "x-api-key: ###############################" -X POST

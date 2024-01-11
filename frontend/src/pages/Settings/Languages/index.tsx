@@ -72,7 +72,7 @@ const SettingsLanguagesView: FunctionComponent = () => {
 
       <Section header="Language Equals">
         <Message>
-          Treat the following languages as equal across all providers.
+          Treat the following languages as equal across all providers:
         </Message>
         <EqualsTable></EqualsTable>
       </Section>
@@ -89,7 +89,7 @@ const SettingsLanguagesView: FunctionComponent = () => {
           <Selector
             clearable
             settingKey={defaultUndAudioLang}
-            label="Treat unknown language audio track as (changing this will trigger missing subtitles calculation)"
+            label="Treat unknown language audio track as (changing this will trigger missing subtitles calculation):"
             placeholder="Select languages"
             options={undAudioLanguages.map((v) => {
               return { label: v.name, value: v.code2 };
@@ -102,7 +102,7 @@ const SettingsLanguagesView: FunctionComponent = () => {
         <Selector
           clearable
           settingKey={defaultUndEmbeddedSubtitlesLang}
-          label="Treat unknown language embedded subtitles track as (changing this will trigger full subtitles indexation using cache)"
+          label="Treat unknown language embedded subtitles track as (changing this will trigger full subtitles indexation using cache):"
           placeholder="Select languages"
           options={undEmbeddedSubtitlesLanguages.map((v) => {
             return { label: v.name, value: v.code2 };
@@ -121,7 +121,7 @@ const SettingsLanguagesView: FunctionComponent = () => {
           settingKey="settings-general-serie_default_enabled"
         ></Check>
         <Message>
-          Apply only to Series added to Bazarr after enabling this option.
+          Apply a profile only to Series added to Bazarr after enabling this option:
         </Message>
 
         <CollapseBox indent settingKey="settings-general-serie_default_enabled">
@@ -137,7 +137,7 @@ const SettingsLanguagesView: FunctionComponent = () => {
           settingKey="settings-general-movie_default_enabled"
         ></Check>
         <Message>
-          Apply only to Movies added to Bazarr after enabling this option.
+          Apply a profile only to Movies added to Bazarr after enabling this option:
         </Message>
 
         <CollapseBox indent settingKey="settings-general-movie_default_enabled">

@@ -22,11 +22,12 @@ const SettingsRadarrView: FunctionComponent = () => {
     <Layout name="Radarr">
       <Section header="Use Radarr">
         <Check label="Enabled" settingKey={moviesEnabledKey}></Check>
+        <Message>Whether to pull Movies from Radarr.</Message>
       </Section>
       <CollapseBox settingKey={moviesEnabledKey}>
         <Section header="Host">
           <Text label="Address" settingKey="settings-radarr-ip"></Text>
-          <Message>Hostname or IPv4 Address</Message>
+          <Message>Hostname or IPv4 Address of Radarr.</Message>
           <Number label="Port" settingKey="settings-radarr-port"></Number>
           <Text
             label="Base URL"
@@ -43,6 +44,7 @@ const SettingsRadarrView: FunctionComponent = () => {
             settingKey="settings-radarr-http_timeout"
           ></Selector>
           <Text label="API Key" settingKey="settings-radarr-apikey"></Text>
+          <Message>Your Radarr API key.</Message>
           <Check label="SSL" settingKey="settings-radarr-ssl"></Check>
           <URLTestButton category="radarr"></URLTestButton>
         </Section>
@@ -51,6 +53,10 @@ const SettingsRadarrView: FunctionComponent = () => {
             label="Minimum Score"
             settingKey="settings-general-minimum_score_movie"
           ></Slider>
+          <Message>
+            The score of a subtitle file is a measuerment of how well its
+            filename matches your media filename.
+          </Message>
           <Chips
             label="Excluded Tags"
             settingKey="settings-radarr-excluded_tags"
@@ -77,7 +83,7 @@ const SettingsRadarrView: FunctionComponent = () => {
             as soon as movies are imported.
           </Message>
           <Message>
-            Search can be triggered using this command
+            Search can be triggered using this command: 
             <Code>
               curl -d "radarr_moviefile_id=$radarr_moviefile_id" -H "x-api-key:
               ###############################" -X POST

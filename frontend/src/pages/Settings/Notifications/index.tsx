@@ -39,7 +39,7 @@ const SettingsNotificationsView: FunctionComponent = () => {
           settingKey="settings-general-dont_notify_manual_actions"
         ></Check>
         <Message>
-          Suppress notifications when manually download/upload subtitles.
+          Suppress notifications when subtitles are manually downloaded/uploaded.
         </Message>
       </Section>
     </Layout>

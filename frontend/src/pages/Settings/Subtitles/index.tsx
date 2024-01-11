@@ -134,7 +134,7 @@ const SettingsSubtitlesView: FunctionComponent = () => {
           settingKey="settings-general-subfolder"
         ></Selector>
         <Message>
-          Choose the folder you wish to store/read the subtitles
+          Choose the folder where you wish to store/read the subtitles.
         </Message>
         <CollapseBox
           settingKey="settings-general-subfolder"
@@ -151,7 +151,7 @@ const SettingsSubtitlesView: FunctionComponent = () => {
           settingKey="settings-general-hi_extension"
         ></Selector>
         <Message>
-          What file extension to use when saving hearing-impaired subtitles to
+          Which file extension to use when saving hearing-impaired subtitles to
           disk (e.g., video.en.sdh.srt).
         </Message>
       </Section>
@@ -210,6 +210,8 @@ const SettingsSubtitlesView: FunctionComponent = () => {
         ></Check>
         <Message>
           Schedule a task to upgrade subtitles previously downloaded by Bazarr.
+          Upgrading searches for files with higher scores, and replaces them if
+          found.
         </Message>
         <CollapseBox settingKey="settings-general-upgrade_subs">
           <Slider
@@ -232,12 +234,12 @@ const SettingsSubtitlesView: FunctionComponent = () => {
       </Section>
       <Section header="Encoding">
         <Check
-          label="Encode Subtitles To UTF8"
+          label="Encode Subtitles To UTF-8"
           settingKey="settings-general-utf8_encode"
         ></Check>
         <Message>
-          Re-encode downloaded Subtitles to UTF8. Should be left enabled in most
-          case.
+          Re-encode downloaded Subtitles to UTF-8. Should be left enabled in most
+          cases.
         </Message>
       </Section>
       <Section header="Permissions">
@@ -286,8 +288,8 @@ const SettingsSubtitlesView: FunctionComponent = () => {
           settingKey="settings-general-multithreading"
         ></Check>
         <Message>
-          Search multiple providers at once (Don't choose this on low powered
-          devices)
+          Search multiple providers at once. (Don't enable this on low-powered
+          machines.)
         </Message>
         <Check
           label="Skip video file hash calculation"
@@ -316,7 +318,7 @@ const SettingsSubtitlesView: FunctionComponent = () => {
         ></Check>
         <Message>
           Removes all possible style tags from the subtitle, such as font, bold,
-          color etc.
+          color, etc.
         </Message>
         <Check
           label="OCR Fixes"
@@ -325,7 +327,7 @@ const SettingsSubtitlesView: FunctionComponent = () => {
         ></Check>
         <Message>
           Fix issues that happen when a subtitle gets converted from bitmap to
-          text through OCR.
+          text using OCR.
         </Message>
         <Check
           label="Common Fixes"
@@ -333,7 +335,7 @@ const SettingsSubtitlesView: FunctionComponent = () => {
           settingKey="subzero-common"
         ></Check>
         <Message>
-          Fix common and whitespace/punctuation issues in subtitles.
+          Fix common and whitespace/punctuation issues.
         </Message>
         <Check
           label="Fix Uppercase"
@@ -368,7 +370,7 @@ const SettingsSubtitlesView: FunctionComponent = () => {
           playback devices.
         </Message>
       </Section>
-      <Section header="Synchronizarion / Alignement">
+      <Section header="Synchronization / Alignement">
         <Check
           label="Always use Audio Track as Reference for Syncing"
           settingKey="settings-subsync-force_audio"
@@ -407,8 +409,7 @@ const SettingsSubtitlesView: FunctionComponent = () => {
           settingKey="settings-subsync-use_subsync"
         ></Check>
         <Message>
-          Enable the automatic subtitles synchronization after downloading a
-          subtitles.
+          Enable automatic synchronization after downloading a subtitle.
         </Message>
         <CollapseBox indent settingKey="settings-subsync-use_subsync">
           <MultiSelector
@@ -446,7 +447,7 @@ const SettingsSubtitlesView: FunctionComponent = () => {
           label="Custom Post-Processing"
         ></Check>
         <Message>
-          Enable the post-processing execution after downloading a subtitles.
+          Enable the post-processing execution after downloading a subtitle.
         </Message>
         <CollapseBox indent settingKey="settings-general-use_postprocessing">
           <Check

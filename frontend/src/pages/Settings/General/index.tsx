@@ -46,7 +46,10 @@ const SettingsGeneralView: FunctionComponent = () => {
           placeholder="0.0.0.0"
           settingKey="settings-general-ip"
         ></Text>
-        <Message>Valid IPv4 address or '0.0.0.0' for all interfaces</Message>
+        <Message>
+          The address of this installation of Bazarr. Use a valid 
+          IPv4 address or '0.0.0.0' for all interfaces.
+        </Message>
         <Number
           label="Port"
           placeholder="6767"
@@ -129,7 +132,7 @@ const SettingsGeneralView: FunctionComponent = () => {
         ></Check>
         <Message>
           Allow third parties to make requests towards your Bazarr installation.
-          Requires a restart of Bazarr when changed
+          Requires a restart of Bazarr when changed.
         </Message>
       </Section>
       <Section header="Proxy">
@@ -155,7 +158,7 @@ const SettingsGeneralView: FunctionComponent = () => {
           ></Password>
           <Message>
             You only need to enter a username and password if one is required.
-            Leave them blank otherwise
+            Leave them blank otherwise.
           </Message>
           <Chips
             label="Ignored Addresses"
@@ -173,16 +176,16 @@ const SettingsGeneralView: FunctionComponent = () => {
           label="Automatic"
           settingKey="settings-general-auto_update"
         ></Check>
-        <Message>Automatically download and install updates</Message>
+        <Message>Automatically download and install updates for Bazarr.</Message>
         <Selector
           options={branchOptions}
           settingKey="settings-general-branch"
         ></Selector>
-        <Message>Branch used by update mechanism</Message>
+        <Message>Which branch to be used by the update mechanism.</Message>
       </Section>
       <Section header="Logging">
         <Check label="Debug" settingKey="settings-general-debug"></Check>
-        <Message>Debug logging should only be enabled temporarily</Message>
+        <Message>Debug logging should only be enabled temporarily.</Message>
       </Section>
       <Section header="Backups">
         <File
@@ -190,7 +193,7 @@ const SettingsGeneralView: FunctionComponent = () => {
           settingKey="settings-backup-folder"
           type="bazarr"
         ></File>
-        <Message>Absolute path to the backup directory</Message>
+        <Message>The absolute path to the backup directory for Bazarr.</Message>
         <Number
           label="Retention"
           settingKey="settings-backup-retention"
@@ -207,7 +210,7 @@ const SettingsGeneralView: FunctionComponent = () => {
       <Section header="Analytics">
         <Check label="Enable" settingKey="settings-analytics-enabled"></Check>
         <Message>
-          Send anonymous usage information, nothing that can identify you. This
+          Sends anonymous usage information, nothing that can identify you. This
           includes information on which providers you use, what languages you
           search for, Bazarr, Python, Sonarr, Radarr and what OS version you are
           using. We will use this information to prioritize features and bug
